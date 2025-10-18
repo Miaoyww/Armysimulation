@@ -425,15 +425,7 @@
 				</div>
 
 
-				<div class="panel-section">
-					<div class="panel-title">
-						<span class="icon">📊</span>
-						<span>单位属性</span>
-					</div>
-					<div id="unit-properties">
-						<p>选择一个单位查看属性</p>
-					</div>
-				</div>
+
 
 				<div class="panel-section">
 					<div class="panel-title">
