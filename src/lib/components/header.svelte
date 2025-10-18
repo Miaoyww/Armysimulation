@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Separator } from '$lib/components/ui/separator/index.js';
-	import { Plus, Settings, SquareArrowOutUpRight, RefreshCcw, PanelLeft } from '@lucide/svelte';
+	import { Plus, Settings, SquareArrowOutUpRight, RefreshCcw, PanelLeft, PanelsTopLeft } from '@lucide/svelte';
 	import SidebarTrigger from '$lib/components/ui/sidebar/sidebar-trigger.svelte';
 	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements';
 	import { cn, type WithElementRef } from '$lib/utils.js';
@@ -28,7 +28,7 @@
 	<!--左-->
 	<div class="blur-backdrop flex items-center gap-3 rounded-lg p-3">
 		<Button variant="ghost" size="icon" class="-ml-1 text-black" onclick={togglePin}>
-			<Plus />
+			<PanelsTopLeft />
 		</Button>
 		<div class="flex gap-2">
 			<MapTypeButton>标准</MapTypeButton>

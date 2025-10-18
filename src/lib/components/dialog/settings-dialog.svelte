@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { settingOpen } from '$lib/stores/setting-dialog-store';
 	import { onDestroy, onMount } from 'svelte';
-	import { Button } from '../../ui/button';
+	import { Button } from '../ui/button';
 	import * as Tabs from '$lib/components/ui/tabs/index.js';
 	import * as Card from '$lib/components/ui/card/index.js';
 	import { Input } from '$lib/components/ui/input/index.js';
 	import { Label } from '$lib/components/ui/label/index.js';
 	import Venue from '$lib/components/dialog/settings/venue.svelte';
-	import General from './general.svelte';
-	import About from './about.svelte';
+	import General from './settings/general.svelte';
+	import About from './settings/about.svelte';
 	import { crossfade, fade } from 'svelte/transition';
 	import { cubicInOut, cubicOut } from 'svelte/easing';
 	import { X } from '@lucide/svelte';

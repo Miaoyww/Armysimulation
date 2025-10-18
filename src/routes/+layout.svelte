@@ -10,7 +10,7 @@
 	import Bottom from '$lib/components/bottom.svelte';
 	import UnitPro from '$lib/components/unit-pro.svelte';
 	import LeftSidebar from '$lib/components/sidebar/left-sidebar.svelte';
-	import SettingsDialog from '$lib/components/dialog/settings/settings-dialog.svelte';
+	import SettingsDialog from '$lib/components/dialog/settings-dialog.svelte';
 	let { children } = $props();
 </script>
 
