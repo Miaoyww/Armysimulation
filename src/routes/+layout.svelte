@@ -10,11 +10,12 @@
 	import Bottom from '$lib/components/bottom.svelte';
 	import UnitPro from '$lib/components/unit-pro.svelte';
 	import LeftSidebar from '$lib/components/sidebar/left-sidebar.svelte';
+	import SettingsDialog from '$lib/components/dialog/settings/settings-dialog.svelte';
 	let { children } = $props();
 </script>
 
 <div>
-	<div class="px-4 lg:px-6">
+	<div>
 		<main>
 			{@render children?.()}
 		</main>
@@ -25,13 +26,16 @@
 	<h4>攻击范围图例</h4>
 	<div id="legend-content"></div>
 </div> -->
+
 <LeftSidebar />
 <UnitPro />
 <Header />
 <Bottom />
 <RightSidebar />
+<SettingsDialog />
+
 <!-- 右键菜单 -->
-<div
+<!-- <div
 	class="absolute z-[10000] hidden min-w-[160px] rounded-md border border-(--border-color) bg-(--bg-card) py-[5px] shadow"
 	id="context-menu"
 >
@@ -43,13 +47,11 @@
 	<Separator />
 	<div class="context-menu-item" id="context-copy-unit">复制单位</div>
 	<div class="context-menu-item" id="context-move-to">移动至此</div>
-</div>
+</div> -->
 
 <style>
 	* {
 		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
 	}
 
 	.context-menu-item {

@@ -8,9 +8,7 @@
 <Tooltip.Provider>
 	<Tooltip.Root>
 		<Tooltip.Trigger>
-			<Button variant="ghost" size="icon">
-				<slot />
-			</Button>
+			<slot />
 		</Tooltip.Trigger>
 		<Tooltip.Content>
 			<p>{content}</p>
