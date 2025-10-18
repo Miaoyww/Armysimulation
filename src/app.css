@@ -4,8 +4,41 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+	font-family: 'HarmonyOS SansSC';
+	src:
+		url('/fonts/HarmonyOS_SansSC_Regular') format('ttf'),
+		url('/fonts/HarmonyOS_SansSC_Regular') format('ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HarmonyOS SansSC';
+	src:
+		url('/fonts/HarmonyOS_SansSC_Bold') format('ttf'),
+		url('/fonts/HarmonyOS_SansSC_Bold') format('ttf');
+	font-weight: 700;
+	font-style: bold;
+}
+
+html,
 body {
-	overflow: hidden;
+	padding-top: calc(var(--safe-area-inset-top) + 1rem);
+	display: flex;
+	flex-direction: column;
+	scroll-behavior: smooth;
+	overscroll-behavior: none;
+	overflow-x: hidden;
+	font-family: 'HarmonyOS SansSC', sans-serif;
+}
+
+.blur-backdrop {
+	background: rgba(255, 255, 255, 0.3); /* 半透明白色，可换成暗色模式 */
+	-webkit-backdrop-filter: blur(10px); /* Safari 支持 */
+	backdrop-filter: blur(10px); /* 模糊效果 */
+
+	box-shadow: var(--shadow);
 }
 
 :root {

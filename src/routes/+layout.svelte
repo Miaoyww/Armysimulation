@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
-	import AppSidebar from '$lib/components/sidebar/app-sidebar.svelte';
-	import SiteHeader from '$lib/components/sidebar/site-header.svelte';
+	import AppSidebar from '$lib/components/sidebar/left/app-sidebar.svelte';
+	import SiteHeader from '$lib/components/sidebar/left/site-header.svelte';
 	import { cn } from '$lib/utils';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	let { children } = $props();
@@ -32,6 +32,7 @@
 	</Sidebar.Inset>
 </Sidebar.Provider>
 
+
 <!-- 右键菜单 -->
 <div
 	class="absolute z-[10000] hidden min-w-[160px] rounded-md border border-(--border-color) bg-(--bg-card) py-[5px] shadow"
@@ -53,7 +54,7 @@
 		padding: 0;
 		box-sizing: border-box;
 	}
-	
+
 	.context-menu-item {
 		padding: 8px 15px;
 		cursor: pointer;
@@ -65,5 +66,5 @@
 	.context-menu-item:hover {
 		background: var(--bg-tertiary);
 	}
-	
+
 </style>
