@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Separator } from '$lib/components/ui/separator/index.js';
-	import { Plus, Settings, SquareArrowOutUpRight, RefreshCcw } from '@lucide/svelte';
+	import { Plus, Settings, SquareArrowOutUpRight, RefreshCcw, PanelLeft } from '@lucide/svelte';
 	import SidebarTrigger from '$lib/components/ui/sidebar/sidebar-trigger.svelte';
 	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements';
 	import { cn, type WithElementRef } from '$lib/utils.js';
 	import MapTypeButton from '$lib/components/buttons/map-type-button.svelte';
 	import { zoom } from '$lib/stores/map-store';
+	import { leftBarPinned } from '$lib/stores/sidebar-store';
 	let isBillNow: boolean = $state(false);
 	let isSharing = $state(false);
 
@@ -17,12 +18,18 @@
 			({ type: 'file'; files?: FileList } | { type?: InputType; files?: undefined })
 	>;
 	let { class: className, ...restProps }: Props = $props();
+
+	function togglePin() {
+		leftBarPinned.update((prev) => !prev);
+	}
 </script>
 
-<div class={cn('z-1000 flex justify-between -mt-5', className)}>
+<div class={cn('absolute top-5 right-5 left-5 z-1000 flex justify-between', className)}>
 	<!--左-->
-	<div class="flex items-center gap-3 rounded-lg p-3 blur-backdrop">
-		<SidebarTrigger class="-ml-1 text-black" />
+	<div class="blur-backdrop flex items-center gap-3 rounded-lg p-3">
+		<Button variant="ghost" size="icon" class="-ml-1 text-black" onclick={togglePin}>
+			<Plus />
+		</Button>
 		<div class="flex gap-2">
 			<MapTypeButton>标准</MapTypeButton>
 			<MapTypeButton>地形</MapTypeButton>
@@ -31,9 +38,7 @@
 	</div>
 
 	<!--右-->
-	<div
-		class="flex gap-4 rounded-lg px-[15px] py-[10px] text-sm text-stone-900 blur-backdrop"
-	>
+	<div class="blur-backdrop flex gap-4 rounded-lg px-3 py-3 pl-3 text-sm text-stone-900">
 		<div class="flex flex-col gap-1">
 			<div class="status-label">缩放级别</div>
 			<div class="status-value" id="zoom-level">{$zoom}</div>
