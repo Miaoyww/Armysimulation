@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@types/geojson':
+        specifier: ^7946.0.16
+        version: 7946.0.16
+      leaflet:
+        specifier: ^1.9.4
+        version: 1.9.4
       sveaflet:
         specifier: ^0.1.4
         version: 0.1.4(@algolia/client-search@5.40.1)(leaflet@1.9.4)(search-insights@2.17.3)(svelte@5.40.2)
@@ -39,8 +45,11 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.13
         version: 4.1.14(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
+      '@types/leaflet':
+        specifier: ^1.9.21
+        version: 1.9.21
       bits-ui:
-        specifier: ^2.11.0
+        specifier: ^2.11.8
         version: 2.11.8(@internationalized/date@3.10.0)(@sveltejs/kit@2.47.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1)))(svelte@5.40.2)
       clsx:
         specifier: ^2.1.1
@@ -666,6 +675,12 @@ packages:
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
+
+  '@types/geojson@7946.0.16':
+    resolution: {integrity: sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==}
+
+  '@types/leaflet@1.9.21':
+    resolution: {integrity: sha512-TbAd9DaPGSnzp6QvtYngntMZgcRk+igFELwR2N99XZn7RXUdKgsXMR+28bUO0rPsWp8MIu/f47luLIQuSLYv/w==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1828,6 +1843,12 @@ snapshots:
   '@types/cookie@0.6.0': {}
 
   '@types/estree@1.0.8': {}
+
+  '@types/geojson@7946.0.16': {}
+
+  '@types/leaflet@1.9.21':
+    dependencies:
+      '@types/geojson': 7946.0.16
 
   '@types/unist@3.0.3': {}
 

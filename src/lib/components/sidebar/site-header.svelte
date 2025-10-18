@@ -6,6 +6,7 @@
 	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements';
 	import { cn, type WithElementRef } from '$lib/utils.js';
 	import MapTypeButton from '../buttons/map-type-button.svelte';
+	import { zoom } from '$lib/stores/map-store';
 	let isBillNow: boolean = $state(false);
 	let isSharing = $state(false);
 
@@ -33,7 +34,7 @@
 	>
 		<div class="flex flex-col gap-1">
 			<div class="status-label">缩放级别</div>
-			<div class="status-value" id="zoom-level">5</div>
+			<div class="status-value" id="zoom-level">{$zoom}</div>
 		</div>
 		<div class="flex flex-col gap-1">
 			<div class="status-label">单位数量</div>
