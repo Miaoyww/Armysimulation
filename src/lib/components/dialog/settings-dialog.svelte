@@ -26,10 +26,6 @@
 		class="setting-dialog absolute z-1000 flex items-center justify-center rounded-lg"
 		transition:fade={{ duration: 100 }}
 	>
-		<!--上侧标题-->
-		<div class="blur-backdrop absolute -top-13 ml-20 rounded-lg pt-1 pr-4 pb-1 pl-4 text-center">
-			<h2 class="text-lg font-bold">设置</h2>
-		</div>
 		<!-- 左侧边栏 -->
 		<Tabs.Tabs bind:value={activeTab} orientation="vertical" class="flex h-full">
 			<Tabs.List class="mb-4">
